@@ -16,15 +16,11 @@ stages:
   - job: test
     displayName: test
     steps:
-      - task: Gradle@3
+      - task: CmdLine@2
         inputs:
-          gradleWrapperFile: 'gradlew'
-          tasks: 'build'
-          publishJUnitResults: true
-          testResultsFiles: '**/TEST-*.xml'
-          javaHomeOption: 'JDKVersion'
-          sonarQubeRunAnalysis: false
-          spotBugsAnalysis: false
+          script: |
+            echo Write your commands here1111111
+            echo Hello world11111111
 
 - stage : script
   displayName: script name
@@ -35,5 +31,5 @@ stages:
       - task: CmdLine@2
         inputs:
           script: |
-            echo Write your commands here
-            echo Hello world
+            echo Write your commands here22222222
+            echo Hello world2222222
